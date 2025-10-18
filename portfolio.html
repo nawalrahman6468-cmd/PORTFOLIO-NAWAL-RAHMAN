@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nawal Rahman | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #f5f5f5;
+      scroll-behavior: smooth;
+    }
+
+    /* Header Section */
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00bcd4;
+      box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #00bcd4;
+    }
+
+    header p {
+      color: #bbb;
+      margin-top: 8px;
+      font-size: 1rem;
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #111;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin: 12px 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    /* Section Styling */
+    section {
+      max-width: 850px;
+      margin: 60px auto;
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: 0.3s;
+    }
+
+    section:hover {
+      box-shadow: 0 0 25px rgba(0,188,212,0.3);
+    }
+
+    h2 {
+      color: #00bcd4;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #00bcd4;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+
+    /* Upload Section */
+    .upload-section {
+      text-align: center;
+      border: 2px dashed #00bcd4;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 25px;
+    }
+
+    input[type="file"] {
+      color: white;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #000;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="mine.jpg" alt="Nawal Rahman">
+    <h1>Nawal Rahman</h1>
+    <p>Engineering Student | Car Enthusiast | Future Mechanical/Electrical Engineer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#documents">Documents</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m <b>Nawal Rahman</b> from Malappuram, Kerala. I’m passionate about cars, machines, and technology. 
+       My goal is to become a skilled electrical or mechanical engineer and design creative, efficient innovations 
+       that make a difference in the world.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Higher Secondary - Science Stream</li>
+      <li>Pursuing B.Tech in Electrical and Electronics Engineering from FISAT (Federal Institute of Science and Technology)</li>
+    </ul>
+  </section>
+
+  <section id="documents">
+    <h2>Upload Documents</h2>
+    <div class="upload-section">
+      <p>Upload your resume, certificates, or other portfolio files below:</p>
+      <input type="file" id="fileUpload" multiple>
+      <br>
+      <button onclick="uploadFiles()">Upload</button>
+      <p id="uploadMsg"></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:nawalrahman6468@gmail.com">nawalrahman6468@gmail.com</a></p>
+    <p>Address: Thaikkat House, Randathani, Malappuram, Kerala</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nawal Rahman | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function uploadFiles() {
+      const fileInput = document.getElementById('fileUpload');
+      const msg = document.getElementById('uploadMsg');
+
+      if (fileInput.files.length === 0) {
+        msg.innerHTML = "⚠️ Please select a file to upload.";
+        msg.style.color = "red";
+      } else {
+        msg.innerHTML = "✅ Files selected successfully! (Note: Actual upload requires backend setup.)";
+        msg.style.color = "#00bcd4";
+      }
+    }
+  </script>
+
+</body>
+</html>
